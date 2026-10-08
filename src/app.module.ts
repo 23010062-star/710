@@ -6,6 +6,8 @@ import { AppService } from './app.service.js';
 import { BooksModule } from './books/books.module.js';
 import { ReadersModule } from './readers/readers.module.js';
 import { BorrowedRecordsModule } from './borrowed-records/borrowed-records.module.js';
+import { AuthModule } from './auth/auth.module.js';
+import { UsersModule } from './users/users.module.js';
 
 @Module({
   imports: [
@@ -48,6 +50,8 @@ import { BorrowedRecordsModule } from './borrowed-records/borrowed-records.modul
     BooksModule,
     ReadersModule,
     BorrowedRecordsModule,
+    AuthModule,
+    UsersModule,
   ],
   controllers: [AppController],
   providers: [AppService],
