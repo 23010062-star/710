@@ -5,6 +5,9 @@ import { AppModule } from './app.module.js';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
+  // Cho phép frontend (Vite) gọi API cross-origin
+  app.enableCors();
+
   // Validation toàn cục: tự động validate DTO và transform query/body
   app.useGlobalPipes(
     new ValidationPipe({
